@@ -1,0 +1,48 @@
+/* SPDX-License-Identifier: GPL-2.0+ */
+/*
+ * Exynos CAL-IF stub for linux-5.15 (minimal implementation)
+ * This file provides minimal cal-if compatibility for clock drivers
+ */
+
+#ifndef __CAL_IF_H__
+#define __CAL_IF_H__
+
+/* Minimal cal-if API stubs for clock driver compatibility */
+
+static inline int cal_if_init(void *dev)
+{
+	/* Stub: cal-if initialization not required in upstream linux-5.15 */
+	return 0;
+}
+
+static inline int cal_clk_setrate(unsigned int vclkid, unsigned long rate)
+{
+	/* Stub: rate setting handled by standard clock framework */
+	return 0;
+}
+
+static inline unsigned long cal_clk_getrate(unsigned int vclkid)
+{
+	/* Stub: rate query handled by standard clock framework */
+	return 0;
+}
+
+static inline int cal_clk_enable(unsigned int vclkid)
+{
+	/* Stub: clock gating handled by standard clock framework */
+	return 0;
+}
+
+static inline int cal_clk_disable(unsigned int vclkid)
+{
+	/* Stub: clock gating handled by standard clock framework */
+	return 0;
+}
+
+static inline int cal_qch_init(unsigned int vclkid, unsigned int use_qch)
+{
+	/* Stub: QCH (Quality of Service Channel) initialization stub */
+	return 0;
+}
+
+#endif /* __CAL_IF_H__ */

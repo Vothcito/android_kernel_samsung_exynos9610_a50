@@ -1,0 +1,26 @@
+# Kernel build artifacts
+*.o
+*.ko
+*.cmd
+*.dtb
+*.dtbo
+*.mod
+*.mod.c
+*.order
+*.symvers
+
+Image
+Image.gz
+Image.lz4
+
+.config
+.config.old
+Module.symvers
+
+include/generated/
+arch/arm64/boot/Image*
+arch/arm64/boot/dts/**/*.dtb
+
+build.log
+dtbo.log
+dtbo_build.log
