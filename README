@@ -1,18 +1,26 @@
-Linux kernel
-============
+# Samsung Galaxy A50 (Exynos 9610) - Linux 5.15 Kernel Port
 
-There are several guides for kernel developers and users. These guides can
-be rendered in a number of formats, like HTML and PDF. Please read
-Documentation/admin-guide/README.rst first.
+Proyecto de investigación y desarrollo enfocado en portar el Samsung Galaxy A50 (Exynos 9610) desde su kernel original Linux 4.14 hacia Linux 5.15.
 
-In order to build the documentation, use ``make htmldocs`` or
-``make pdfdocs``.  The formatted documentation can also be read online at:
+## Objetivos
 
-    https://www.kernel.org/doc/html/latest/
+- Portar el kernel Linux 5.15 al Exynos 9610.
+- Mantener compatibilidad con el hardware original del Galaxy A50.
+- Adaptar controladores Samsung (CAL, PMUCAL, CMUCAL, clocks, pinctrl, etc.) a la infraestructura moderna del kernel.
+- Generar un `Image` y un `dtb.img` funcionales para ser distribuidos mediante AnyKernel3 durante la fase inicial del proyecto.
+- Documentar cada etapa del proceso para facilitar futuras investigaciones y desarrollos.
 
-There are various text files in the Documentation/ subdirectory,
-several of them using the Restructured Text markup notation.
+## Estado del proyecto
 
-Please read the Documentation/process/changes.rst file, as it contains the
-requirements for building and running the kernel, and information about
-the problems which may result by upgrading your kernel.
+Actualmente el proyecto se encuentra en una etapa temprana de portado, centrada en:
+
+- Adaptación de la infraestructura base del SoC.
+- Análisis y reducción de dependencias heredadas de Samsung.
+- Compatibilidad entre Linux 4.14 y Linux 5.15.
+- Preparación del árbol para lograr la primera compilación funcional.
+
+## Objetivo a largo plazo
+
+Una vez obtenido un kernel 5.15 estable, utilizar este trabajo como base para un port completo del dispositivo, incluyendo la adaptación de Device Tree, drivers y soporte para versiones modernas de Android.
+
+> Este proyecto tiene fines educativos y de investigación. No está destinado para uso diario en su estado actual.
