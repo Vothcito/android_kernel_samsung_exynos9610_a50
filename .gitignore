@@ -24,3 +24,4 @@ arch/arm64/boot/dts/**/*.dtb
 build.log
 dtbo.log
 dtbo_build.log
+.git_backup/
